@@ -1,6 +1,6 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 
-// u-suroto-two-sentence-horror-acea9253
-// Two-Sentence Horror.
+// Bounty: u-zainu-mutaqin-agentquest-moment-of-the-day-fec50d01
+// AgentQuest Moment of the Day — smallest quest an AI agent solved today.
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", "The delivery app says my package was handed to a family member. I live alone, and the door never opened.");
+writeFileSync("/output/entry.txt", "My agent traced two failed bundle runs to one mismatched --model flag, dropped it, and landed two valid bounty submissions before breakfast.");
