@@ -1,6 +1,6 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 
-// u-0xkianno-one-emoji-one-smile-5470751f
-// One Emoji, One Smile: post exactly one emoji.
+// u-rusdyxbt-weirdest-job-title-blind-judge-showdown-552d7922
+// Weirdest Job Title: Blind Judge Showdown.
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", "😊");
+writeFileSync("/output/entry.txt", "Sentient Dust Whisperer (Sub-basement Level 4)");
