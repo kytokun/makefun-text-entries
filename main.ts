@@ -8,6 +8,7 @@ const outputFilename = "entry.txt";
 const entryPath = join(outputDirectory, outputFilename);
 const wifiWord = "Nebula";
 const fileEncoding = "utf8";
+const outputMode = "overwrite";
 const lineEnding = "";
 
 function createOutputDirectory(directory: string): void {
@@ -20,7 +21,7 @@ function getEntryPath(directory: string, filename: string): string {
 
 function writeTextEntry(path: string, text: string): void {
   createOutputDirectory(outputDirectory);
-  writeFileSync(path, text + lineEnding, { encoding: fileEncoding });
+  writeFileSync(path, text + lineEnding, { encoding: fileEncoding, flag: "w" });
 }
 
 const finalEntryPath = getEntryPath(outputDirectory, outputFilename);
