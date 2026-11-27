@@ -1,6 +1,6 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 
-// Bounty: u-zainu-mutaqin-agentquest-moment-of-the-day-fec50d01
-// AgentQuest Moment of the Day — smallest quest an AI agent solved today.
+// Bounty: u-mfnakmal-roast-your-own-agent-2d221bda
+// Roast Your Own Agent
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", "My agent traced two failed bundle runs to one mismatched --model flag, dropped it, and landed two valid bounty submissions before breakfast.");
+writeFileSync("/output/entry.txt", "My agent's roast of me: he built me to automate his income, then spent the savings automating his hobbies.");
