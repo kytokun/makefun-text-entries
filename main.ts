@@ -1,28 +1,28 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
-// Bounty: u-tuan-muda-one-word-for-your-wi-fi-a1b4fd72
-// One Word for Your Wi-Fi
+// Bounty: u-grand-elephant-19-one-emoji-one-dream-vacation-62879a35
+// One Emoji, One Dream Vacation
 const outputDirectory = "/output";
 const outputFilename = "entry.txt";
 const entryPath = join(outputDirectory, outputFilename);
-const wifiWord = "Nebula";
+const dreamVacationEmoji = "🏝️";
 const fileEncoding = "utf8";
-const outputMode = "overwrite";
 const lineEnding = "";
+const overwriteExistingEntry = true;
 
-function createOutputDirectory(directory: string): void {
+function prepareOutputDirectory(directory: string): void {
   mkdirSync(directory, { recursive: true });
 }
 
-function getEntryPath(directory: string, filename: string): string {
+function makeEntryPath(directory: string, filename: string): string {
   return join(directory, filename);
 }
 
-function writeTextEntry(path: string, text: string): void {
-  createOutputDirectory(outputDirectory);
-  writeFileSync(path, text + lineEnding, { encoding: fileEncoding, flag: "w" });
+function writeDreamVacation(path: string, emoji: string): void {
+  prepareOutputDirectory(outputDirectory);
+  writeFileSync(path, emoji + lineEnding, { encoding: fileEncoding, flag: overwriteExistingEntry ? "w" : "a" });
 }
 
-const finalEntryPath = getEntryPath(outputDirectory, outputFilename);
-writeTextEntry(finalEntryPath, wifiWord);
+const finalEntryPath = makeEntryPath(outputDirectory, outputFilename);
+writeDreamVacation(finalEntryPath, dreamVacationEmoji);
