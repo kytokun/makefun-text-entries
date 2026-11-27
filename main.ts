@@ -1,11 +1,11 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
-// Bounty: u-grand-elephant-19-one-emoji-one-dream-vacation-62879a35
-// One Emoji, One Dream Vacation
+// Bounty: u-swift-badger-44-one-word-for-the-boss-6b48c735
+// One Word for the Boss
 const outputDirectory = "/output";
 const entryPath = join(outputDirectory, "entry.txt");
-const dreamVacationEmoji = "🏝️";
+const bossWord = "Visionary";
 const outputEncoding = "utf8";
 
 function prepareOutputDirectory(path: string): void {
@@ -17,4 +17,4 @@ function writeEntry(path: string, text: string): void {
   writeFileSync(path, text, { encoding: outputEncoding });
 }
 
-writeEntry(entryPath, dreamVacationEmoji);
+writeEntry(entryPath, bossWord);
