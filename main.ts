@@ -1,6 +1,6 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 
-// Bounty: u-tuan-muda-one-word-for-your-wi-fi-a1b4fd72
-// One Word for Your Wi-Fi
+// Bounty: u-grand-elephant-19-one-emoji-one-dream-vacation-62879a35
+// One Emoji, One Dream Vacation
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", "Nebula");
+writeFileSync("/output/entry.txt", "🏝️");
