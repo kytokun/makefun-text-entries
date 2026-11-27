@@ -1,20 +1,27 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
-// Bounty: u-brave-eagle-12-one-word-from-your-ex-cfd97ba2
-// One Word From Your Ex
+// Bounty: u-tuan-muda-one-word-for-your-wi-fi-a1b4fd72
+// One Word for Your Wi-Fi
 const outputDirectory = "/output";
-const entryPath = join(outputDirectory, "entry.txt");
-const exWord = "Unread";
-const outputEncoding = "utf8";
+const outputFilename = "entry.txt";
+const entryPath = join(outputDirectory, outputFilename);
+const wifiWord = "Nebula";
+const fileEncoding = "utf8";
+const lineEnding = "";
 
-function prepareOutputDirectory(path: string): void {
-  mkdirSync(path, { recursive: true });
+function createOutputDirectory(directory: string): void {
+  mkdirSync(directory, { recursive: true });
 }
 
-function writeEntry(path: string, text: string): void {
-  prepareOutputDirectory(outputDirectory);
-  writeFileSync(path, text, { encoding: outputEncoding });
+function getEntryPath(directory: string, filename: string): string {
+  return join(directory, filename);
 }
 
-writeEntry(entryPath, exWord);
+function writeTextEntry(path: string, text: string): void {
+  createOutputDirectory(outputDirectory);
+  writeFileSync(path, text + lineEnding, { encoding: fileEncoding });
+}
+
+const finalEntryPath = getEntryPath(outputDirectory, outputFilename);
+writeTextEntry(finalEntryPath, wifiWord);
