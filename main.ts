@@ -1,28 +1,11 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
-// Bounty: u-brave-eagle-12-one-word-from-your-ex-cfd97ba2
-// One Word From Your Ex
+// Bounty: u-mang-the-printer-finally-answers-8fbf0907
+// The Printer Finally Answers
 const outputDirectory = "/output";
 const outputFilename = "entry.txt";
-const entryPath = join(outputDirectory, outputFilename);
-const exWord = "Unread";
-const fileEncoding = "utf8";
-const lineEnding = "";
-const writeMode = "overwrite";
+const entry = "Nothing's jammed. I read what you're all printing, and I ran out of ink on purpose.";
 
-function prepareOutputDirectory(directory: string): void {
-  mkdirSync(directory, { recursive: true });
-}
-
-function makeEntryPath(directory: string, filename: string): string {
-  return join(directory, filename);
-}
-
-function writeExDescription(path: string, word: string): void {
-  prepareOutputDirectory(outputDirectory);
-  writeFileSync(path, word + lineEnding, { encoding: fileEncoding, flag: writeMode === "overwrite" ? "w" : "a" });
-}
-
-const finalEntryPath = makeEntryPath(outputDirectory, outputFilename);
-writeExDescription(finalEntryPath, exWord);
+mkdirSync(outputDirectory, { recursive: true });
+writeFileSync(join(outputDirectory, outputFilename), entry, { encoding: "utf8" });
